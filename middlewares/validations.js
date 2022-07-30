@@ -23,7 +23,7 @@ const checkingCreateUser = celebrate({
     about: Joi.string().min(2).max(30),
     avatar: Joi.string().custom(checkingUrl),
     email: Joi.string().required().email(),
-    password: Joi.string().required().min(8),
+    password: Joi.string().required(),
   }),
 });
 
